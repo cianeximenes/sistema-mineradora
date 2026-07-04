@@ -1,7 +1,6 @@
-// src/components/OptionsMenu.jsx
 import { useState, useEffect, useRef } from 'react'
 
-export default function OptionsMenu({ onEditarClick, onExcluirClick }) { // <- Adicionado onEditarClick aqui
+export default function OptionsMenu({ onEditarClick, onExcluirClick }) { 
   const [aberto, setAberto] = useState(false)
   const menuRef = useRef(null)
 
@@ -30,13 +29,13 @@ export default function OptionsMenu({ onEditarClick, onExcluirClick }) { // <- A
 
       {aberto && (
         <div className="menu-dots-popover">
-          {/* Opção EDITAR - AGORA CONECTADA */}
+          {/* Opção editar*/}
           <button 
             type="button"
             onClick={(e) => {
               e.stopPropagation()
               setAberto(false)
-              if (onEditarClick) onEditarClick() // <- DISPARA A ABERTURA DO MODAL DE EDIÇÃO!
+              if (onEditarClick) onEditarClick() 
             }}
           >
             <span className="material-icons" style={{ fontSize: '16px' }}>edit</span>

@@ -1,4 +1,3 @@
-// src/pages/Servicos.jsx
 import { useEffect, useState } from 'react'
 import {
   listarServicos,
@@ -9,7 +8,7 @@ import {
 import OptionsMenu from '../components/OptionsMenu.jsx'
 import ModalDelete from '../modais/ModalDelete.jsx' 
 import ModalForm from '../modais/ModalForm.jsx' 
-import AnimacaoFade from '../components/AnimacaoFade.jsx' // IMPORTADO
+import AnimacaoFade from '../components/AnimacaoFade.jsx' 
 import '/src/styles/ModalDelete.css' 
 
 const STATUS_OPCOES = ['Pendente', 'Em andamento', 'Concluído']
@@ -37,10 +36,8 @@ export default function Servicos() {
   const [carregando, setCarregando] = useState(true)
   const [enviando, setEnviando] = useState(false)
 
-  // Estados focados no modal de exclusão
   const [itemParaExcluir, setItemParaExcluir] = useState(null)
 
-  // Estados indispensáveis para gerenciar os 4 campos do formulário de Edição
   const [modalEditarAberto, setModalEditarAberto] = useState(false)
   const [descricaoEdicao, setDescricaoEdicao] = useState('')
   const [statusEdicao, setStatusEdicao] = useState('')
@@ -79,7 +76,6 @@ export default function Servicos() {
     return cidades.find((c) => c.id === id)?.nome || '—'
   }
 
-  // Apenas fecha o modal simulando no front
   function confirmarExclusaoSimulada() {
     setItemParaExcluir(null)
   }
@@ -87,7 +83,7 @@ export default function Servicos() {
   return (
     <div className="page">
       
-      {/* 1. CABEÇALHO SURGE IMEDIATAMENTE */}
+      { }
       <AnimacaoFade delay="0s">
         <div className="page-title-row">
           <div className="title-bar" />
@@ -95,7 +91,7 @@ export default function Servicos() {
         </div>
       </AnimacaoFade>
 
-      {/* 2. FORMULÁRIO DE CADASTRO DESLIZA LOGO EM SEGUIDA */}
+      { }
       <AnimacaoFade delay="0.12s">
         <form className="card" onSubmit={handleCadastrar} style={{ marginTop: '20px' }}>
           <div className="card-header">
@@ -161,7 +157,7 @@ export default function Servicos() {
         </form>
       </AnimacaoFade>
 
-      {/* 3. SEÇÃO COMPLETA DA LISTA E RODAPÉ SURGEM POR ÚLTIMO */}
+      { }
       <AnimacaoFade delay="0.24s">
         <div className="list-section">
           <div className="list-section-title linha-oscilante">

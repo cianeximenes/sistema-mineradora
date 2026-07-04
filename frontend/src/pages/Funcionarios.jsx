@@ -62,7 +62,7 @@ export default function Funcionarios() {
   return (
     <div className="page">
       
-      {/* 1. CABEÇALHO SURGE IMEDIATAMENTE */}
+      { }
       <AnimacaoFade delay="0s">
         <div className="page-title-row">
           <div className="title-bar" />
@@ -70,7 +70,7 @@ export default function Funcionarios() {
         </div>
       </AnimacaoFade>
 
-      {/* 2. FORMULÁRIO DE CADASTRO DESLIZA LOGO EM SEGUIDA */}
+      { }
       <AnimacaoFade delay="0.12s">
         <form className="card" onSubmit={handleCadastrar} style={{ marginTop: '20px' }}>
           <div className="card-header">
@@ -129,7 +129,7 @@ export default function Funcionarios() {
         </form>
       </AnimacaoFade>
 
-      {/* 3. SEÇÃO COMPLETA DA LISTA E RODAPÉ SURGEM POR ÚLTIMO */}
+      { }
       <AnimacaoFade delay="0.24s">
         <div className="list-section">
           <div className="list-section-title linha-oscilante">
@@ -185,7 +185,7 @@ export default function Funcionarios() {
         </div>
       </AnimacaoFade>
 
-      {/* MODAL DE DELETAR */}
+      {/* Modal de Deletar */}
       <ModalDelete 
         aberto={!!itemParaExcluir} 
         titulo="Excluir funcionário" 
@@ -199,7 +199,7 @@ export default function Funcionarios() {
         carregando={false}
       />
 
-      {/* MODAL DE EDIÇÃO */}
+      {/* Modal de Edição */}
       <ModalForm 
         aberto={modalEditarAberto} 
         titulo="Editar funcionário" 

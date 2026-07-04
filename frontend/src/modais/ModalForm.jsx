@@ -1,4 +1,3 @@
-// src/modais/ModalForm.jsx
 import { useEffect } from 'react'
 
 export default function ModalForm({
@@ -7,10 +6,9 @@ export default function ModalForm({
   icone = 'edit',
   onCancelar,
   onSalvar,
-  children, // <- Aqui vão entrar os inputs específicos de cada página!
+  children, 
 }) {
   
-  // Fecha ao apertar ESC
   useEffect(() => {
     if (!aberto) return
     function handleKeyDown(e) {
@@ -41,12 +39,12 @@ export default function ModalForm({
           </button>
         </div>
 
-        {/* Corpo do Modal: Onde os inputs injetados pelo 'children' vão aparecer */}
+        {/* Onde os inputs injetados pelo 'children' vão aparecer */}
         <div className="modal-form-body" style={{ margin: '20px 0', display: 'flex', flexDirection: 'column', gap: '16px' }}>
           {children}
         </div>
 
-        {/* Ações do Rodapé exatamente iguais à imagem */}
+        { }
         <div className="modal-actions" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.06)', paddingTop: '20px' }}>
           <button type="button" className="btn-cancelar" onClick={onCancelar}>
             CANCELAR

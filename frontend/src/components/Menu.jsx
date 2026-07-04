@@ -1,6 +1,6 @@
 const ITENS = [
-  { id: 'inicio', label: 'Início', icon: 'home' }, // Nome do ícone no Google
-  { id: 'equipamentos', label: 'Equipamentos', icon: 'construction' }, // Ícone que parece uma picareta/martelo
+  { id: 'inicio', label: 'Início', icon: 'home' }, 
+  { id: 'equipamentos', label: 'Equipamentos', icon: 'construction' }, 
   { id: 'cidades', label: 'Cidades', icon: 'location_city' },
   { id: 'funcionarios', label: 'Funcionários', icon: 'badge' },
   { id: 'servicos', label: 'Serviços', icon: 'settings' },

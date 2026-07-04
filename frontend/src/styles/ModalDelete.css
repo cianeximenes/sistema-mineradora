@@ -1,24 +1,20 @@
-/* ---------------- Modal de Exclusão (ModalDelete) ---------------- */
-
-/* Faz a camada escura cobrir a tela inteira e fixa tudo por cima do conteúdo */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.75); /* Escurece o fundo da aplicação */
+  background: rgba(0, 0, 0, 0.75); 
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999; /* Garante que fique acima de QUALQUER elemento */
+  z-index: 9999;
   padding: 20px;
   animation: modal-fade-in 0.15s ease;
 }
 
-/* Container do Modal centralizado */
 .modal-card {
-  background: #11161f; /* Mesma cor var(--card-bg) */
+  background: #11161f; 
   border: 1px solid rgba(245, 166, 35, 0.2);
   border-radius: 12px;
   width: 100%;
@@ -48,7 +44,6 @@
   margin: 0;
 }
 
-/* Círculo do ícone de lixeira em vermelho sutil */
 .icon-circle.danger {
   border: 1.5px solid #ff4d4f;
   background: rgba(255, 77, 79, 0.15);
@@ -86,7 +81,6 @@
   text-align: left;
 }
 
-/* Bloco de aviso vermelho escuro contendo o nome do item */
 .modal-warning-box {
   display: flex;
   align-items: flex-start;
@@ -138,7 +132,6 @@
   padding-top: 20px;
 }
 
-/* Botão CANCELAR vazado com borda dourada */
 .btn-cancelar {
   flex: 1;
   background: transparent;
@@ -157,7 +150,6 @@
   background: rgba(245, 166, 35, 0.1);
 }
 
-/* Botão EXCLUIR preenchido com vermelho sólido da referência */
 .btn-excluir {
   flex: 1;
   background: #ff4d4f;
@@ -176,7 +168,6 @@
   background: #761f20;
 }
 
-/* Estilos para o corpo de formulários dentro do modal */
 .modal-form-body .field {
   display: flex;
   flex-direction: column;
@@ -206,7 +197,6 @@
   border-color: var(--gold);
 }
 
-/* Animações de surgimento suave */
 @keyframes modal-fade-in {
   from { opacity: 0; }
   to { opacity: 1; }

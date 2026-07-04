@@ -1,4 +1,3 @@
-// src/pages/Inicio.jsx
 import { useEffect, useState } from 'react'
 import {
   listarCidades,
@@ -10,7 +9,7 @@ import {
 import OptionsMenu from '../components/OptionsMenu.jsx'
 import ModalDelete from '../modais/ModalDelete.jsx' 
 import ModalForm from '../modais/ModalForm.jsx' 
-import AnimacaoFade from '../components/AnimacaoFade.jsx' // IMPORTADO
+import AnimacaoFade from '../components/AnimacaoFade.jsx' 
 import '/src/styles/ModalDelete.css'
 
 const DELETE_MAP = {
@@ -28,14 +27,11 @@ export default function Inicio() {
   const [movimentacoes, setMovimentacoes] = useState([])
   const [carregando, setCarregando]     = useState(true)
 
-  // Estado do modal de exclusão
   const [modalItem, setModalItem] = useState(null)  
 
-  // Estados do formulário de edição
   const [modalEditarAberto, setModalEditarAberto] = useState(false)
   const [itemParaEditar, setItemParaEditar] = useState(null) 
   
-  // Estados dos inputs
   const [campoNome, setCampoNome] = useState('')
   const [campoSub, setCampoSub] = useState('')
 
@@ -65,7 +61,7 @@ export default function Inicio() {
   return (
     <div className="page">
 
-      {/* MODAL REAPROVEITADO UNIVERSAL DE DELETAR */}
+      { }
       <ModalDelete 
         aberto={!!modalItem} 
         titulo={`Excluir ${DELETE_MAP[modalItem?.tipo]?.label ?? 'Item'}`} 
@@ -79,7 +75,7 @@ export default function Inicio() {
         carregando={false}
       />
 
-      {/* 1. HEADER COM ANIMAÇÃO IMEDIATA */}
+      { }
       <AnimacaoFade delay="0s">
         <div className="dashboard-header">
           <h1>Painel de Controle da Mineradora</h1>
@@ -87,7 +83,7 @@ export default function Inicio() {
         </div>
       </AnimacaoFade>
 
-      {/* 2. CARDS PRINCIPAIS SURGEM LOGO EM SEGUIDA */}
+      { }
       <AnimacaoFade delay="0.12s">
         <div className="stats-grid">
           <StatCard icon="apartment"      label="Cidades"      value={cidades.length} />
@@ -96,7 +92,7 @@ export default function Inicio() {
         </div>
       </AnimacaoFade>
 
-      {/* 3. CARDS SECUNDÁRIOS COM UM LEVE ATRASO ADICIONAL */}
+      { }
       <AnimacaoFade delay="0.22s">
         <div className="stats-grid secondary-row">
           <StatCard icon="build"         label="Serviços"   value={servicos.length} />
@@ -104,7 +100,7 @@ export default function Inicio() {
         </div>
       </AnimacaoFade>
 
-      {/* 4. SEÇÃO DE MOVIMENTAÇÕES COMPLETA DESLIZA POR ÚLTIMO */}
+      { }
       <AnimacaoFade delay="0.32s">
         <div className="movimentacoes-title">
           <span className="movimentacoes-content">
@@ -182,7 +178,7 @@ export default function Inicio() {
         </div>
       </AnimacaoFade>
 
-      {/* MODAL FORMS - COMPORTAMENTO DAS LABELS CORRIGIDO */}
+      { }
       <ModalForm
         aberto={modalEditarAberto}
         titulo={`Editar ${DELETE_MAP[itemParaEditar?.tipoTextual]?.label ?? 'Serviço'}`}

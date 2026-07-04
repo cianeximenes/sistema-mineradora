@@ -1,4 +1,3 @@
-// src/components/AnimacaoFade.jsx
 export default function AnimacaoFade({ children, delay = '0s' }) {
   return (
     <div 

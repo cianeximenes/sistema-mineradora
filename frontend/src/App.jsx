@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useState } from 'react'
 import Menu from './components/Menu.jsx'
 import Inicio from './pages/Inicio.jsx'

@@ -1,4 +1,3 @@
-// src/modais/ModalDelete.jsx
 import { useEffect } from 'react'
 
 export default function ModalDelete({
@@ -8,13 +7,12 @@ export default function ModalDelete({
   itemLabel = 'Item:',
   itemNome,
   itemDetalhe,
-  itemIcone = 'info', // ÍCONE ADAPTÁVEL: Se não enviar nada, o padrão vira o ícone universal de informação
+  itemIcone = 'info', 
   onCancelar,
   onConfirmar,
   carregando = false,
 }) {
   
-  // Fecha o modal ao pressionar ESC
   useEffect(() => {
     if (!aberto) return
     function handleKeyDown(e) {
@@ -52,7 +50,7 @@ export default function ModalDelete({
             <strong className="modal-warning-name">{itemNome}</strong>
             {itemDetalhe && (
               <div className="modal-warning-sub">
-                {/* MODIFICADO: Agora renderiza a prop itemIcone de forma dinâmica */}
+                {/* Renderiza a prop itemIcone de forma dinâmica */}
                 <span className="material-icons" style={{ fontSize: '14px', color: 'var(--gold)' }}>
                   {itemIcone}
                 </span>

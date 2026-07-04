@@ -4,7 +4,7 @@ import { listarEquipamentos, criarEquipamento } from '../services/api.js'
 import OptionsMenu from '../components/OptionsMenu.jsx'
 import ModalDelete from '../modais/ModalDelete.jsx' 
 import ModalForm from '../modais/ModalForm.jsx'
-import AnimacaoFade from '../components/AnimacaoFade.jsx' // IMPORTADO
+import AnimacaoFade from '../components/AnimacaoFade.jsx' 
 import '/src/styles/ModalDelete.css'
 
 const SETORES = ['Extração', 'Processamento', 'Transporte']
@@ -16,10 +16,8 @@ export default function Equipamentos() {
   const [carregando, setCarregando] = useState(true)
   const [enviando, setEnviando] = useState(false)
 
-  // Estados focados apenas em abrir e fechar o modal com os dados certos
   const [itemParaExcluir, setItemParaExcluir] = useState(null)
 
-  // Estados indispensáveis para o ModalForm de edição funcionar
   const [modalEditarAberto, setModalEditarAberto] = useState(false)
   const [nomeEdicao, setNomeEdicao] = useState('')
   const [setorEdicao, setSetorEdicao] = useState('')
@@ -42,7 +40,6 @@ export default function Equipamentos() {
     setEnviando(false)
   }
 
-  // Apenas fecha o modal simulando a exclusão visual por enquanto
   function confirmarExclusaoSimulada() {
     setItemParaExcluir(null) 
   }
@@ -50,7 +47,7 @@ export default function Equipamentos() {
   return (
     <div className="page">
       
-      {/* 1. CABEÇALHO SURGE IMEDIATAMENTE */}
+      { }
       <AnimacaoFade delay="0s">
         <div className="page-title-row">
           <div className="title-bar" />
@@ -58,7 +55,7 @@ export default function Equipamentos() {
         </div>
       </AnimacaoFade>
 
-      {/* 2. FORMULÁRIO DE CADASTRO DESLIZA LOGO EM SEGUIDA */}
+      { }
       <AnimacaoFade delay="0.12s">
         <form className="card" onSubmit={handleCadastrar} style={{ marginTop: '20px' }}>
           <div className="card-header">
@@ -96,7 +93,7 @@ export default function Equipamentos() {
         </form>
       </AnimacaoFade>
 
-      {/* 3. SEÇÃO COMPLETA DA LISTA E RODAPÉ APARECEM POR ÚLTIMO */}
+      { }
       <AnimacaoFade delay="0.24s">
         <div className="list-section">
           <div className="list-section-title linha-oscilante" style={{ marginBottom: '24px' }}>
@@ -145,7 +142,7 @@ export default function Equipamentos() {
         </div>
       </AnimacaoFade>
 
-      {/* MODAL DE DELETAR */}
+      { }
       <ModalDelete 
         aberto={!!itemParaExcluir} 
         titulo="Excluir equipamento" 
@@ -159,7 +156,7 @@ export default function Equipamentos() {
         itemIcone="construction"
       />
 
-      {/* MODAL DE EDIÇÃO */}
+      { }
       <ModalForm 
         aberto={modalEditarAberto} 
         titulo="Editar equipamento" 

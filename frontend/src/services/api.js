@@ -1,8 +1,4 @@
-// ============================================================
-// services/api.js
-// Dados FALSOS (mock) simulando uma API.
-// ============================================================
-
+/*
 let cidades = [
   { id: 1, nome: 'Crateús' },
   { id: 2, nome: 'Fortaleza' },
@@ -27,7 +23,6 @@ let servicos = [
   { id: 3, descricao: 'Troca de óleo', status: 'Concluído', equipamentoId: 3, cidadeId: 3 },
 ]
 
-// TROCADO AQUI: Agora a API envia os nomes corretos do Google Icons
 let movimentacoes = [
   { id: 1, titulo: 'Cidade cadastrada', subtitulo: 'Sobral - CE', tempo: 'Há 5 minutos', icon: 'apartment' },
   { id: 2, titulo: 'Equipamento adicionado', subtitulo: 'Escavadeira HX300', tempo: 'Há 15 minutos', icon: 'local_shipping' },
@@ -41,7 +36,6 @@ let nextId = (arr) => (arr.length ? Math.max(...arr.map((i) => i.id)) + 1 : 1)
 const delay = (data, ms = 300) =>
   new Promise((resolve) => setTimeout(() => resolve(data), ms))
 
-// ---------------------- CIDADES ----------------------
 export function listarCidades() { return delay([...cidades]) }
 
 export function criarCidade({ nome }) {
@@ -54,7 +48,6 @@ export function criarCidade({ nome }) {
   return delay(nova)
 }
 
-// ---------------------- EQUIPAMENTOS ----------------------
 export function listarEquipamentos() { return delay([...equipamentos]) }
 
 export function criarEquipamento({ nome, setor, cidadeId }) {
@@ -67,7 +60,6 @@ export function criarEquipamento({ nome, setor, cidadeId }) {
   return delay(novo)
 }
 
-// ---------------------- FUNCIONÁRIOS ----------------------
 export function listarFuncionarios() { return delay([...funcionarios]) }
 
 export function criarFuncionario({ nome, cargo, setor, cidadeId }) {
@@ -80,7 +72,6 @@ export function criarFuncionario({ nome, cargo, setor, cidadeId }) {
   return delay(novo)
 }
 
-// ---------------------- SERVIÇOS ----------------------
 export function listarServicos() { return delay([...servicos]) }
 
 export function criarServico({ descricao, status, equipamentoId, cidadeId }) {
@@ -98,12 +89,54 @@ export function criarServico({ descricao, status, equipamentoId, cidadeId }) {
       titulo: status === 'Concluído' ? 'Serviço concluído' : 'Serviço iniciado',
       subtitulo: descricao,
       tempo: 'Agora mesmo',
-      icon: status === 'Concluído' ? 'check_circle' : 'build', // Atualizado
+      icon: status === 'Concluído' ? 'check_circle' : 'build',
     },
     ...movimentacoes,
   ]
   return delay(novo)
 }
 
-// ---------------------- DASHBOARD ----------------------
 export function listarMovimentacoes() { return delay([...movimentacoes]) }
+
+*/
+
+
+
+const delay = (data, ms = 200) =>
+  new Promise((resolve) => setTimeout(() => resolve(data), ms))
+
+export function listarCidades() { 
+  return delay([]) 
+}
+
+export function criarCidade({ nome }) {
+  return delay({ id: Date.now(), nome })
+}
+
+export function listarEquipamentos() { 
+  return delay([]) 
+}
+
+export function criarEquipamento({ nome, setor, cidadeId }) {
+  return delay({ id: Date.now(), nome, setor, cidadeId })
+}
+
+export function listarFuncionarios() { 
+  return delay([]) 
+}
+
+export function criarFuncionario({ nome, cargo, setor, cidadeId }) {
+  return delay({ id: Date.now(), nome, cargo, setor, cidadeId })
+}
+
+export function listarServicos() { 
+  return delay([]) 
+}
+
+export function criarServico({ descricao, status, equipamentoId, cidadeId }) {
+  return delay({ id: Date.now(), descricao, status, equipamentoId, cidadeId })
+}
+
+export function listarMovimentacoes() { 
+  return delay([]) 
+}

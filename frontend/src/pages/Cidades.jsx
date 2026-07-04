@@ -5,7 +5,7 @@ import { ESTADOS } from '../utils/estados.js'
 import OptionsMenu from '../components/OptionsMenu.jsx' 
 import ModalDelete from '../modais/ModalDelete.jsx' 
 import ModalForm from '../modais/ModalForm.jsx' 
-import AnimacaoFade from '../components/AnimacaoFade.jsx' // IMPORTADO
+import AnimacaoFade from '../components/AnimacaoFade.jsx' 
 import '/src/styles/ModalDelete.css' 
 
 export default function Cidades() {
@@ -16,10 +16,8 @@ export default function Cidades() {
   const [carregando, setCarregando] = useState(true)
   const [enviando, setEnviando] = useState(false)
 
-  // Estados focados no modal de exclusão
   const [itemParaExcluir, setItemParaExcluir] = useState(null)
 
-  // Estados indispensáveis para o ModalForm de edição de Cidades
   const [modalEditarAberto, setModalEditarAberto] = useState(false)
   const [nomeEdicao, setNomeEdicao] = useState('')
   const [estadoEdicao, setEstadoEdicao] = useState('')
@@ -47,7 +45,6 @@ export default function Cidades() {
     return servicos.filter((serv) => serv.cidadeId === cidadeId).length
   }
 
-  // Apenas fecha o modal simulando no front
   function confirmarExclusaoSimulada() {
     setItemParaExcluir(null)
   }
@@ -55,7 +52,7 @@ export default function Cidades() {
   return (
     <div className="page">
       
-      {/* 1. CABEÇALHO SURGE IMEDIATAMENTE */}
+      { }
       <AnimacaoFade delay="0s">
         <div className="page-title-row">
           <div className="title-bar" />
@@ -63,7 +60,7 @@ export default function Cidades() {
         </div>
       </AnimacaoFade>
 
-      {/* 2. FORMULÁRIO DE CADASTRO DESLIZA LOGO EM SEGUIDA */}
+      { }
       <AnimacaoFade delay="0.12s">
         <form className="card" onSubmit={handleCadastrar} style={{ marginTop: '20px' }}>
           <div className="card-header">
@@ -103,7 +100,7 @@ export default function Cidades() {
         </form>
       </AnimacaoFade>
 
-      {/* 3. GRID DE CIDADES E RODAPÉ APARTADOS NA ÚLTIMA CAMADA */}
+      { }
       <AnimacaoFade delay="0.24s">
         <div className="list-section">
           <div className="list-section-title linha-oscilante">
@@ -160,7 +157,7 @@ export default function Cidades() {
         </div>
       </AnimacaoFade>
 
-      {/* MODAL DE DELETAR */}
+      { }
       <ModalDelete 
         aberto={!!itemParaExcluir} 
         titulo="Excluir cidade" 
@@ -174,7 +171,7 @@ export default function Cidades() {
         itemIcone="map"
       />
 
-      {/* MODAL DE EDIÇÃO */}
+      { }
       <ModalForm 
         aberto={modalEditarAberto} 
         titulo="Editar cidade" 

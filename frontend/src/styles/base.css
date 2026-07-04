@@ -1,10 +1,3 @@
-/* ============================================================
-   styles/base.css
-   CSS global do Sistema Mineradora.
-   Todo o visual do app (cores, cards, botões, inputs, menu)
-   fica centralizado aqui.
-   ============================================================ */
-
 :root {
   --bg: #0a0e16;
   --bg-soft: #0d1117;
@@ -36,7 +29,6 @@ body {
   margin: 0;
   min-height: 100vh;
   
-  /* 1. O fundo escuro com as listras que você escolheu */
   background-color: #161a1f; 
   background-image: 
     linear-gradient(180deg, rgba(242, 169, 59, 0.03), transparent 40%),
@@ -49,10 +41,8 @@ body {
     );
   background-attachment: fixed;
 
-  /* 2. Devolve a fonte padrão do sistema (sem ser a Times) */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 
-  /* 3. Força o texto base a ser branco/claro para o "Total de Cidades" não sumir no preto */
   color: #ffffff; 
 }
 
@@ -336,7 +326,6 @@ body {
   margin-top: 36px;
 }
 
-/* Deixamos apenas o h3 para estilizar o texto de Equipamentos, sem as linhas */
 .list-section-title h3 {
   display: flex;
   align-items: center;
@@ -588,9 +577,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* Espaço entre as linhas e o texto */
+  gap: 20px; 
   width: 100%;
-  color: #ffffff; /* Cor dourada/laranja do seu tema */
+  color: #ffffff; 
   font-weight: bold;
   letter-spacing: 1px;
   margin: 30px 0 20px 0;
@@ -600,8 +589,8 @@ body {
 .movimentacoes-title::before,
 .movimentacoes-title::after {
   content: "";
-  flex: 1; /* Faz a linha ocupar todo o espaço disponível lateralmente */
-  height: 2px; /* Espessura da linha */
+  flex: 1; 
+  height: 2px; 
 }
 
 /* Linha da Esquerda: desvanece da direita para a esquerda */
@@ -618,8 +607,8 @@ body {
 .movimentacoes-content {
   display: flex;
   align-items: center;
-  gap: 10px; /* Espaço entre o ícone e a palavra */
-  white-space: nowrap; /* Impede que o texto quebre linha */
+  gap: 10px;
+  white-space: nowrap; 
 }
 
 /* ---------------- Cidades grid ---------------- */
@@ -693,7 +682,6 @@ body {
    EFEITOS GLOBAIS REUTILIZÁVEIS
    ============================================================ */
 
-/* Adicione a nova classe aqui no final do arquivo ou onde preferir */
 .linha-oscilante {
   display: flex;
   align-items: center;
@@ -744,22 +732,17 @@ body {
   .list-item .material-icons {
     color: var(--gold) !important;
   }
-} /* <- CHAVE DE FECHAMENTO DO RESPONSIVO CORRIGIDA AQUI! */
-
-
-/* ============================================================
-   ANIMAÇÃO UNIVERSAL (REUTILIZÁVEL PARA TODAS AS TELAS)
-   ============================================================ */
+}
 
 .efeito-fade-subida {
   animation: fadeSubidaUniversal 0.5s ease-out forwards;
-  opacity: 0; /* Começa invisível e o CSS faz aparecer suavemente */
+  opacity: 0;
 }
 
 @keyframes fadeSubidaUniversal {
   from {
     opacity: 0;
-    transform: translateY(15px); /* Desliza 15px para cima enquanto surge */
+    transform: translateY(15px); 
   }
   to {
     opacity: 1;
